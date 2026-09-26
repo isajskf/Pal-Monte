@@ -1,0 +1,10 @@
+# 1. Corregir el .gitignore
+echo node_modules/ > .gitignore
+
+# 2. Sacar node_modules de Git (no la borra de tu computador)
+git rm -r --cached node_modules
+
+# 3. Subir los cambios (incluye el ci.yml corregido)
+git add .gitignore .github/workflows/ci.yml
+git commit -m "Fix: corregir workflow y dejar de rastrear node_modules"
+git push
